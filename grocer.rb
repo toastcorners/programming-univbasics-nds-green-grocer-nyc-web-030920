@@ -67,7 +67,7 @@ count = 0
 while count < cart.length
 if cart[count][:clearance]
   discount = cart[count][:price]
-  cart[count][:price] = (discount - (discount * .20)).round(2)
+  cart[count][:price] = (discount - (discount * 0.20)).round(2)
     end
   count += 1
 end
