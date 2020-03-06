@@ -63,10 +63,17 @@ def apply_coupons(cart, coupons)
   end
 
 def apply_clearance(cart)
-  # Consult README for inputs and outputs
-  #
-  # REMEMBER: This method **should** update cart
+count = 0
+while count < cart.length
+if cart[count][:clearance]
+  discount = cart[count][:price]
+  cart[count][:price] = (discount - (discount * .20)).round(2)
+    end
+  count += 1
 end
+cart
+end
+
 
 def checkout(cart, coupons)
   # Consult README for inputs and outputs
